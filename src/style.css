@@ -1,0 +1,38 @@
+#header {
+    text-align: center;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery {
+    width: auto;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    gap: 2px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.frame {
+    height: 75px;
+    width: 75px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture:hover {
+    filter: saturate(10);
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0.01;
+}
