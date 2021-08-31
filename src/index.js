@@ -1,54 +1,30 @@
-import './style.css';
-import './modal.css';
-import {imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI} from './imgdata.js';
+import './css/style.css';
+import { imgs } from './imgdata.js';
+import { reset, gallery, createDivFrame, createImg} from './gallery.js';
+import { modal } from './modal.js';
 
-const imgs = [
-    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-];
+const body = document.body;
 
-// for (let i = 0; i < 16; i++) {
-//     const img = () => {
-//         const url = `https://via.placeholder.com/300x250?text=${i+1}`;
-//         return {i, url}
-//     }
-//     imgs.push(img());
-// }
+const wrapper = document.createElement("div");
+wrapper.id = "wrapper";
 
-const gallery = document.querySelector("#gallery");
+const header = document.createElement("div");
+header.id = "header";
+const h1 = document.createElement("h1");
+h1.textContent = "Galeria";
+header.appendChild(h1);
 
-const createDivFrame = picture => {
-    const divTag = document.createElement("div");
-    divTag.classList.add("frame");    
-    divTag.append(picture);
-    return divTag
-}
+wrapper.appendChild(header);
 
-const modal = document.querySelector('#myModal');
-const modalContent = document.querySelector(".modal-content");
+const content = document.createElement("div");
+content.id = "content";
+wrapper.appendChild(content);
 
-const createImg = url => {
-    const imgTag = document.createElement("img");
-    imgTag.src = url;
-    imgTag.classList.add("picture");
-    imgTag.classList.add("hidden");
-    imgTag.addEventListener("mouseover", (e) => {
-        e.target.classList.remove("hidden");
-    });
-    imgTag.onclick = function(){
-        modal.style.display = "block";
-        modalContent.src = this.src;
-    }
-    return imgTag
-}
+body.appendChild(wrapper);
 
-const closeButton = document.getElementsByClassName("close")[0];
-
-closeButton.onclick = function() { 
-    modal.style.display = "none";
-}
+const navmenu = document.createElement("div");
+navmenu.id = "navmenu";
+body.appendChild(navmenu);
 
 for (let i = 0; i < imgs.length; i++) {
     const imgUrl = imgs[i];
@@ -58,3 +34,7 @@ for (let i = 0; i < imgs.length; i++) {
     
     gallery.appendChild(divFrame);
 }
+
+content.appendChild(gallery);
+content.appendChild(reset);
+content.appendChild(modal);

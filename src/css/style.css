@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+#wrapper {
+    width: 80%;
+    height: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 10%;
+}
+
+#content {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navmenu {
+    display: flex;
+    width: 20%;
+    min-width: fit-content;
+    height: 100%;
+    border-left: 1px dashed red;
+}

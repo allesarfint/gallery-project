@@ -8,4 +8,9 @@ import imgG from './images/g.jpg';
 import imgH from './images/h.jpg';
 import imgI from './images/i.jpg';
 
-export {imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI}
+export const imgs = [
+    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
+    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
+    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
+    imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
+];
