@@ -1,0 +1,6 @@
+#text-container {
+    width: 50%;
+    white-space: pre-wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+}
