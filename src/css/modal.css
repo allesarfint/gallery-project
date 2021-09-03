@@ -82,13 +82,25 @@
     background-color: rgb(255, 255, 255);
 }
 
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 #view-content {
     display: flex;
     height: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:rgb(107, 107, 107)
+    color:rgb(107, 107, 107);    
+    animation-name: fadein;
+    animation-duration: 2s;
 }
 
 @keyframes change-color {
