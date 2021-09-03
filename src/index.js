@@ -1,24 +1,28 @@
 import './css/style.css';
-import {galleryContent, resetButton} from './gallery.js';
+import {galleryContent} from './gallery.js';
 import { modal } from './modal.js';
 import { textContent } from './text';
+import { createView } from './firstview';
 
 const body = document.body;
+
+body.appendChild(createView())
 
 const navmenu = document.createElement("div");
 navmenu.id = "navmenu";
 
 const title = document.createElement("h1");
 title.classList.add("project");
-title.textContent = "Nombre del Projecto";
+title.textContent = "Superficies";
 navmenu.appendChild(title);
 
 const pages = document.createElement("div");
 pages.classList.add("menu");
 const pageNames = [
-    {title: "Galeria", content: galleryContent()},
+    {title: "Pix", content: galleryContent()},
     {title: "Texto", content: textContent()}, 
-    {title: "Mapa", content: "LOL"}
+    {title: "Mapa", content: "LOL"},
+    {title: "Superficies", content: "LOL"}
 ];
 pageNames.forEach(page => {
     const menu = document.createElement("span");
@@ -53,5 +57,4 @@ wrapper.appendChild(content);
 body.appendChild(wrapper);
 
 content.appendChild(galleryContent());
-content.appendChild(resetButton());
 wrapper.appendChild(modal);

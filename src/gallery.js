@@ -36,10 +36,7 @@ export function galleryContent() {
         
         gallery.appendChild(divFrame);
     }
-    return gallery
-}
 
-export function resetButton() {
     const reset = document.createElement("button");
     reset.id = "reset";
     reset.type = "button";
@@ -50,5 +47,11 @@ export function resetButton() {
             picture.classList.add("hidden");
         })
     })
-    return reset
+
+    const pix = document.createElement("div");
+    pix.id = "pix";
+    pix.appendChild(gallery);
+    pix.appendChild(reset);
+
+    return pix
 }
