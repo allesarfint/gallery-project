@@ -31,6 +31,8 @@ body {
 .menu-item {
     cursor: pointer;
     user-select: none;
+    width: 30%;
+    text-align: center;
 }
 
 #wrapper {
