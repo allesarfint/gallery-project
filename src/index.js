@@ -46,7 +46,7 @@ superficiesMenu.addEventListener("click", () => {
     content.appendChild(createCarousel());
     setTimeout(() => {
         carouselFunction();
-    }, 100);
+    }, 500);
 })
 pages.appendChild(superficiesMenu)
 navmenu.appendChild(pages);
