@@ -7,10 +7,14 @@ import imgF from './images/f.jpg';
 import imgG from './images/g.jpg';
 import imgH from './images/h.jpg';
 import imgI from './images/i.jpg';
-import imgTest from './images/test.jpg'
+import carousel1 from './images/carousel-1.jpg'
 
 export const imgs = [
-    imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest, imgTest
+    carousel1, carousel1, carousel1, carousel1,
+    carousel1, carousel1, carousel1, carousel1,
+    carousel1, carousel1, carousel1, carousel1,
+    carousel1, carousel1, carousel1, carousel1,
+    carousel1, carousel1, carousel1, carousel1, 
     // imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
     // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
     // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
