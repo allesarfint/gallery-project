@@ -17,11 +17,17 @@ export function createView() {
     closeButton.textContent = "×";
     const afterText = document.createElement("article");
     afterText.id = "after-text";
-    const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas elit a ligula condimentum, vitae ultrices enim venenatis. Curabitur sit amet elementum lorem, in lobortis purus. Donec turpis nibh, imperdiet et tellus sit amet, euismod euismod sem. Praesent nunc erat, ornare sed malesuada et, varius quis arcu. Vivamus urna lacus, interdum at lacus quis, finibus vehicula dolor. In consectetur accumsan blandit. Sed id turpis vitae eros feugiat aliquam id nec massa. Sed vitae faucibus justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque bibendum gravida neque.`;
+
+    const text = `
+    Partir de una imagen, recomponer, reconfigurar, extraer de ella su mínimo punto de homogeneidad, vacilar a partir de la saturación, el matiz, el aspecto cromático, su intensidad y encontrar la posición enriquecida en la cual la mirada acude a la inquietud, a la ambigüedad de lo eventual, ya no en movimiento, sino como un hecho capturado en el instante que se prolonga en el tiempo. Un punto de la imagen que se correlaciona directamente con otros mínimos elementos.
+
+    El cuerpo urbano nos posiciona constantemente como espectadores de pequeñas realidades fragmentadas de la ciudad, al tiempo en que estas orgánicamente se van posicionando en la superficie del escenario social. El lugar de las superficies, es un espacio desde el cual se hace una serie de consideraciones teóricas y visuales, alrededor de algunas dinámicas socio- espaciales, que manifiestan la disonancia en que se revela la urbe; con la intención de construir nuevas significaciones e interrelaciones de la realidad concreta de la ciudad de Medellín, específicamente en los sectores patrimoniales, Prado Centro, Boston, y Los Ángeles y las formas espaciales que se generan allí. Tomando como medio el aspecto comunicativo del color, como marcaje urbano y como elemento que se yuxtapone constantemente entre las dinámicas urbanas del patrimonio habitado y arquitectónico.
+    `;
+
     afterText.textContent = text;
     const closeX = document.createElement("span");
     closeX.classList.add("closeX");
-    closeX.textContent = "×"
+    closeX.textContent = "Continuar"
 
     const animatedPoint = document.createElement("div");
     animatedPoint.classList.add("animated-point");
