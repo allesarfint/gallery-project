@@ -1,21 +1,7 @@
-/* #carousel {
-    height: 100%;
-    width: 100%;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center; 
-}
-
-#img-view {
-    left: 10%;
-    max-width: auto;
-    max-height: 100%;
-} */
-
   // Carousel configuration parameters
   $item-width: 40%; // Now we can use percentages!
   $item-separation: 0px; // This now is set with Js
-  $viewer-distance: 450px;
+  $viewer-distance: 1000px;
   
   .carousel {
     padding: 20px;
