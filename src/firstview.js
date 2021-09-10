@@ -27,7 +27,7 @@ export function createView() {
     afterText.textContent = text;
     const closeX = document.createElement("span");
     closeX.classList.add("closeX");
-    closeX.textContent = "Continuar"
+    closeX.textContent = "×"
 
     const animatedPoint = document.createElement("div");
     animatedPoint.classList.add("animated-point");
