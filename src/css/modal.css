@@ -126,3 +126,12 @@
     animation-iteration-count: infinite;
     cursor: pointer
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+#after-text {
+    width: 70%;
+    font-family: 'Crinsom Text', serif;
+    font-size: 1.5rem;
+    margin: 10px;
+}
