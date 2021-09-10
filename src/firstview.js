@@ -9,7 +9,7 @@ export function createView() {
     view.appendChild(viewContent);
 
     const projectTitle = document.createElement("h1");
-    projectTitle.textContent = "Superficies";
+    projectTitle.textContent = "El lugar de las Superficies";
     projectTitle.classList.add("project");
     viewContent.appendChild(projectTitle);
 
