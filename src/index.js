@@ -22,8 +22,8 @@ const pages = document.createElement("div");
 pages.classList.add("menu");
 const pageNames = [
     {title: "Pix", content: galleryContent()},
-    {title: "Texto", content: textContent()}, 
-    {title: "Mapa", content: createMapsLibrary()},
+    {title: "Algunos escritos", content: textContent()}, 
+    {title: "Recorridos", content: createMapsLibrary()},
     // {title: "Superficies", content: createCarousel(), second: carouselFunction()}
 ];
 pageNames.forEach(page => {
