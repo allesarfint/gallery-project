@@ -32,8 +32,14 @@ pageNames.forEach(page => {
     menu.id = page.title;
     menu.textContent = page.title;
     menu.addEventListener("click", function() {
-        content.innerHTML = "";
-        content.appendChild(page.content)
+        wrapper.style.animationName = "fadeout";
+        wrapper.style.animationDuration = "1s";
+        setTimeout(() => {
+            content.innerHTML = "";
+            content.appendChild(page.content);
+            wrapper.style.animationName = "fadein";
+            wrapper.style.animationDuration = "1s"
+        }, 990);
     })
     pages.appendChild(menu);
 })
@@ -43,11 +49,19 @@ superficiesMenu.classList.add("menu-item");
 superficiesMenu.id = "Superficies";
 superficiesMenu.textContent = "Superficies";
 superficiesMenu.addEventListener("click", () => {
-    content.innerHTML = "";
-    content.appendChild(createCarousel());
-    setTimeout(() => {
-        carouselFunction();
-    }, 500);
+    wrapper.style.animationName = "fadeout";
+    wrapper.style.animationDuration = "1s";
+    setTimeout(function() {
+        content.innerHTML = "";
+        content.style.visibility = "hidden";
+        content.appendChild(createCarousel());
+        setTimeout(function() {
+            content.style.visibility = "visible";
+            wrapper.style.animationName = "fadein";
+            wrapper.style.animationDuration = "1s"
+            carouselFunction();
+        }, 1490);
+    }, 990);
 })
 pages.appendChild(superficiesMenu)
 navmenu.appendChild(pages);
