@@ -25,29 +25,29 @@ export function createView() {
     animatedPoint.classList.add("animated-point");
     animatedPoint.addEventListener("click", function () {
         animatedPoint.style.animationName = "fadeout";
-        animatedPoint.style.animationDuration = "1s";
+        animatedPoint.style.animationDuration = "0.5s";
         setTimeout (function () {
             viewContent.removeChild(animatedPoint);            
-        }, 990)
+        }, 490)
         projectTitle.style.animationName = "fadeout";
-        projectTitle.style.animationDuration = "1s";
+        projectTitle.style.animationDuration = "0.5s";
         setTimeout (function () {
             projectTitle.style.animationName = "fadein";
-            projectTitle.style.animationDuration = "1s";     
-        }, 1000)
+            projectTitle.style.animationDuration = "0.5s";     
+        }, 500)
         arrow.style.animationName = "fadeout";
-        arrow.style.animationDuration = "1s";
+        arrow.style.animationDuration = "0.5s";
         setTimeout (function () {
             viewContent.removeChild(arrow);
             viewContent.appendChild(afterText);
             viewContent.appendChild(arrow);
             afterText.style.animationName = "fadein";
-            afterText.style.animationDuration = "1s";
-        }, 1000)
+            afterText.style.animationDuration = "0.5s";
+        }, 500)
         setTimeout (function () {
             arrow.style.animationName = "fadein";
-            arrow.style.animationDuration = "1s";     
-        }, 1000)
+            arrow.style.animationDuration = "0.5s";     
+        }, 500)
             
     })
     viewContent.appendChild(animatedPoint);
@@ -55,18 +55,18 @@ export function createView() {
     setTimeout(function () {
         afterText.addEventListener("click", function() {
             viewContent.style.animationName = "fadeout";
-            viewContent.style.animationDuration = "1s";
+            viewContent.style.animationDuration = "0.5s";
 
             setTimeout(function() {
                 view.removeChild(viewContent);
                 view.style.animationName = "fadeout";
-                view.style.animationDuration = "1s";
+                view.style.animationDuration = "0.5s";
                 setTimeout (function () {
                     view.parentNode.removeChild(view);
-                }, 990)
-            }, 990)
+                }, 490)
+            }, 490)
         })
-    }, 2000)
+    }, 1000)
 
     const arrow = document.createElement("img");
     arrow.src = "http://a1sites.com/FreeImages/Free_Clip_Art/images/arrow/up_arrow_clip.png";
