@@ -29,13 +29,12 @@ export function createView() {
         animatedPoint.style.animationName = "fadeout";
         animatedPoint.style.animationDuration = "0.5s";
         setTimeout (function () {
-            viewContent.removeChild(animatedPoint);            
+            viewContent.removeChild(animatedPoint);          
         }, 490)
         projectTitle.style.animationName = "fadeout";
         projectTitle.style.animationDuration = "0.5s";
         setTimeout (function () {
-            projectTitle.style.animationName = "fadein";
-            projectTitle.style.animationDuration = "0.5s";     
+            projectTitle.style.visibility = "hidden";   
         }, 500)
         arrow.style.animationName = "fadeout";
         arrow.style.animationDuration = "0.5s";
