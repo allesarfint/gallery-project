@@ -50,7 +50,7 @@ superficiesMenu.id = "Superficies";
 superficiesMenu.textContent = "Superficies";
 superficiesMenu.addEventListener("click", () => {
     wrapper.style.animationName = "fadeout";
-    wrapper.style.animationDuration = "1s";
+    wrapper.style.animationDuration = "0.5s";
     setTimeout(function() {
         content.innerHTML = "";
         content.style.visibility = "hidden";
@@ -61,7 +61,7 @@ superficiesMenu.addEventListener("click", () => {
             wrapper.style.animationDuration = "1s"
             carouselFunction();
         }, 1490);
-    }, 990);
+    }, 490);
 })
 pages.appendChild(superficiesMenu)
 navmenu.appendChild(pages);
