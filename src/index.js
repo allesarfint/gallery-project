@@ -3,6 +3,7 @@ import {galleryContent} from './gallery.js';
 import { modal } from './modal.js';
 import { textContent } from './text';
 import { createView } from './firstview';
+import { createCarousel, carouselFunction } from './carousel';
 
 const body = document.body;
 
@@ -22,7 +23,7 @@ const pageNames = [
     {title: "Pix", content: galleryContent()},
     {title: "Texto", content: textContent()}, 
     {title: "Mapa", content: "LOL"},
-    {title: "Superficies", content: "LOL"}
+    // {title: "Superficies", content: createCarousel(), second: carouselFunction()}
 ];
 pageNames.forEach(page => {
     const menu = document.createElement("span");
@@ -35,6 +36,19 @@ pageNames.forEach(page => {
     })
     pages.appendChild(menu);
 })
+
+const superficiesMenu = document.createElement("span");
+superficiesMenu.classList.add("menu-item");
+superficiesMenu.id = "Superficies";
+superficiesMenu.textContent = "Superficies";
+superficiesMenu.addEventListener("click", () => {
+    content.innerHTML = "";
+    content.appendChild(createCarousel());
+    setTimeout(() => {
+        carouselFunction();
+    }, 1);
+})
+pages.appendChild(superficiesMenu)
 navmenu.appendChild(pages);
 
 body.appendChild(navmenu);
@@ -57,4 +71,5 @@ wrapper.appendChild(content);
 body.appendChild(wrapper);
 
 content.appendChild(galleryContent());
+
 wrapper.appendChild(modal);

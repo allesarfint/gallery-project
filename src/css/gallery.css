@@ -29,6 +29,11 @@
     align-items: center;
 }
 
+.picture {
+    height: 100%;
+    width: 100%;
+}
+
 .picture:hover {
     filter: saturate(10);
     cursor: pointer;

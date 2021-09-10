@@ -8,11 +8,8 @@ const closeButton = document.createElement("span")
 closeButton.classList.add("close");
 closeButton.addEventListener("click", function() { 
     modal.style.display = "none";
+    modal.childNodes[1].remove();
 })
 closeButton.textContent = "×"
 modal.appendChild(closeButton);
 
-export const modalContent = document.createElement("img");
-modalContent.id = "img01"
-modalContent.classList.add("modal-content");
-modal.appendChild(modalContent);

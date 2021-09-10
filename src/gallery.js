@@ -1,38 +1,55 @@
-import {modal, modalContent} from './modal.js';
-import { imgs } from './imgdata';
+import {modal} from './modal.js';
+import { videos } from './videodata';
 import './css/gallery.css'
 
 export function galleryContent() {
     const gallery = document.createElement("div");
     gallery.id = "gallery";
 
-    const createDivFrame = picture => {
+    const createDivFrame = (video) => {
         const divTag = document.createElement("div");
-        divTag.classList.add("frame");    
-        divTag.append(picture);
+        divTag.classList.add("frame");
+        divTag.append(video);
         return divTag
     }
 
-    const createImg = url => {
-        const imgTag = document.createElement("img");
-        imgTag.src = url;
-        imgTag.classList.add("picture");
-        imgTag.classList.add("hidden");
-        imgTag.addEventListener("mouseover", (e) => {
+    const createVid = (src, color, index) => {
+        const vidTag = document.createElement("div");
+        vidTag.id = index;
+        vidTag.classList.add("picture", "hidden");
+        vidTag.style.backgroundColor = color;
+        vidTag.addEventListener("mouseover", (e) => {
             e.target.classList.remove("hidden");
         });
-        imgTag.addEventListener("click", function(){
+        vidTag.addEventListener("click", (e) => {
             modal.style.display = "block";
-            modalContent.src = this.src;
+            
+            const modalContent = document.createElement("video");
+            modalContent.classList.add("modal-content");
+            const videoSource = document.createElement("source");
+            videoSource.src = src;
+            console.log(src)
+            videoSource.type = "video/mp4";
+            if (modalContent.childNodes[0]) {
+                modalContent.childNodes[0].remove();
+            };
+            modalContent.autoplay = true;
+            modalContent.loop = true;
+            modalContent.muted = true;
+            modalContent.style.width = "600px";
+            modalContent.style.height = "600px";
+            modalContent.appendChild(videoSource);
+            modal.appendChild(modalContent);
         })
-        return imgTag
+        return vidTag
     }
 
-    for (let i = 0; i < imgs.length; i++) {
-        const imgUrl = imgs[i];
+    for (let i = 0; i < videos.length; i++) {
+        const vidsrc = videos[i].src;
+        const vidColor = videos[i].rgb;
         
-        const imgPicture = createImg(imgUrl);
-        const divFrame = createDivFrame(imgPicture);
+        const vidPicture = createVid(vidsrc, vidColor, i);
+        const divFrame = createDivFrame(vidPicture);
         
         gallery.appendChild(divFrame);
     }

@@ -17,7 +17,7 @@ export function createView() {
     animatedPoint.classList.add("animated-point");
     animatedPoint.addEventListener("click", function () {
         view.style.animationName = "fadeout";
-        view.style.animationDuration = "0.5s";
+        view.style.animationDuration = "0.6s";
         setTimeout (function () {
             view.parentNode.removeChild(view);
         }, 500)
