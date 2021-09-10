@@ -28,7 +28,6 @@ export function galleryContent() {
             modalContent.classList.add("modal-content");
             const videoSource = document.createElement("source");
             videoSource.src = src;
-            console.log(src)
             videoSource.type = "video/mp4";
             if (modalContent.childNodes[0]) {
                 modalContent.childNodes[0].remove();
