@@ -54,15 +54,24 @@ export function galleryContent() {
         gallery.appendChild(divFrame);
     }
 
-    const reset = document.createElement("button");
+    const reset = document.createElement("img");
     reset.id = "reset";
-    reset.type = "button";
-    reset.textContent = "Reset";
+    // reset.type = "button";
+    reset.src = "https://furtaev.ru/preview/undo_small.png";
+    reset.style.width = "50px"
+    reset.style.cursor = "pointer";
+    // reset.textContent = "Reset";
     reset.addEventListener("click", () => {
+        reset.style.animationName = "rotate360";
+        reset.style.animationDuration = "0.5s";
         const pictures = document.querySelectorAll(".picture");
         pictures.forEach(picture => {
             picture.classList.add("hidden");
         })
+        setTimeout(() => {
+            reset.style.animationName = "";
+            reset.style.animationDuration = "";
+        }, 1000);
     })
 
     const pix = document.createElement("div");
