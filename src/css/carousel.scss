@@ -1,3 +1,5 @@
+@use 'sass:math';
+  
   // Carousel configuration parameters
   $item-width: 60%; // Now we can use percentages!
   $item-separation: 0px; // This now is set with Js
@@ -28,7 +30,7 @@
       img {
         width: 100%;
         box-sizing: border-box;
-        padding: 0 $item-separation / 2;
+        padding: math.div($item-separation, 2);
   
         &:not(:first-of-type) {
           position: absolute;
