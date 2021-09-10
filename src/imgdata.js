@@ -7,7 +7,7 @@ import imgF from './images/f.jpg';
 import imgG from './images/g.jpg';
 import imgH from './images/h.jpg';
 import imgI from './images/i.jpg';
-import carousel1 from './images/carousel-1.jpg'
+import carousel1 from './images/carousel-1.jpg';
 
 export const imgs = [
     carousel1, carousel1, carousel1, carousel1,
@@ -20,3 +20,9 @@ export const imgs = [
     // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
     // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
 ];
+
+import mapa1 from './images/mapa-1.jpg';
+
+export const mapas = [
+    mapa1, mapa1, mapa1, mapa1,
+]

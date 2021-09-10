@@ -4,6 +4,7 @@ import { modal } from './modal.js';
 import { textContent } from './text';
 import { createView } from './firstview';
 import { createCarousel, carouselFunction } from './carousel';
+import { createMapsLibrary } from './map';
 
 const body = document.body;
 
@@ -22,7 +23,7 @@ pages.classList.add("menu");
 const pageNames = [
     {title: "Pix", content: galleryContent()},
     {title: "Texto", content: textContent()}, 
-    {title: "Mapa", content: "LOL"},
+    {title: "Mapa", content: createMapsLibrary()},
     // {title: "Superficies", content: createCarousel(), second: carouselFunction()}
 ];
 pageNames.forEach(page => {
