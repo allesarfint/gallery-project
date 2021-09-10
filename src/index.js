@@ -54,6 +54,16 @@ navmenu.appendChild(pages);
 
 body.appendChild(navmenu);
 
+const menus = document.querySelectorAll(".menu-item");
+for (let i = 0; i < menus.length; i++) {
+    menus[i].addEventListener("click", function() {
+        for (let j = 0; j < menus.length; j++) {
+            menus[j].classList.remove("active");
+        }
+        this.classList.add("active");
+    })
+}
+
 const wrapper = document.createElement("div");
 wrapper.id = "wrapper";
 
@@ -72,5 +82,6 @@ wrapper.appendChild(content);
 body.appendChild(wrapper);
 
 content.appendChild(galleryContent());
+menus[0].classList.add("active");
 
 wrapper.appendChild(modal);
