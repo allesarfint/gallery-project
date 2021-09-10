@@ -8,17 +8,11 @@ import imgG from './images/g.jpg';
 import imgH from './images/h.jpg';
 import imgI from './images/i.jpg';
 import carousel1 from './images/carousel-1.jpg';
+import carousel2 from './images/carousel-2.jpg';
 
 export const imgs = [
-    carousel1, carousel1, carousel1, carousel1,
-    carousel1, carousel1, carousel1, carousel1,
-    carousel1, carousel1, carousel1, carousel1,
-    carousel1, carousel1, carousel1, carousel1,
-    carousel1, carousel1, carousel1, carousel1, 
-    // imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-    // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-    // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
-    // imgA, imgB, imgC, imgD, imgE, imgF, imgG, imgH, imgI,
+    carousel1, carousel2, carousel1, carousel2,
+    carousel1, carousel2, carousel1,
 ];
 
 import mapa1 from './images/mapa-1.jpg';
