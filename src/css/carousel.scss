@@ -1,10 +1,11 @@
   // Carousel configuration parameters
-  $item-width: 40%; // Now we can use percentages!
+  $item-width: 60%; // Now we can use percentages!
   $item-separation: 0px; // This now is set with Js
   $viewer-distance: 1000px;
   
   .carousel {
     padding: 20px;
+    height: 100%;
   
     perspective: $viewer-distance;
     overflow: hidden;
@@ -27,6 +28,7 @@
         width: 100%;
         box-sizing: border-box;
         padding: 0 $item-separation / 2;
+        border: 1px dashed black;
   
         &:not(:first-of-type) {
           position: absolute;
@@ -38,20 +40,30 @@
   
     nav {
       display: flex;
-      justify-content: center;
+      position: absolute;
+      top: 30%;
+      z-index: 10;
+      width: 100%;
+
+      justify-content: space-between;
       margin: 20px 0 0;
   
       button {
         flex: 0 0 auto;
-        margin: 0 5px;
+        margin: 0 10px;
   
         cursor: pointer;
   
         color: #333;
-        background: none;
-        border: 1px solid;
+        background: white;
+        border: 1px dashed red;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         padding: 5px 10px;
+      }
+
+      button:hover {
+        transform: scale(1.2);
       }
     }
   }
