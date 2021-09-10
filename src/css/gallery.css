@@ -29,6 +29,10 @@
     align-items: center;
 }
 
+.frame:hover {
+    transform: scale(1.05);
+}
+
 .picture {
     height: 100%;
     width: 100%;
