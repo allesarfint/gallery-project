@@ -17,9 +17,11 @@ export function createView() {
     closeButton.textContent = "×";
     const afterText = document.createElement("article");
     afterText.id = "after-text";
-    afterText.style.cursor = "pointer";
     const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas elit a ligula condimentum, vitae ultrices enim venenatis. Curabitur sit amet elementum lorem, in lobortis purus. Donec turpis nibh, imperdiet et tellus sit amet, euismod euismod sem. Praesent nunc erat, ornare sed malesuada et, varius quis arcu. Vivamus urna lacus, interdum at lacus quis, finibus vehicula dolor. In consectetur accumsan blandit. Sed id turpis vitae eros feugiat aliquam id nec massa. Sed vitae faucibus justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque bibendum gravida neque.`;
     afterText.textContent = text;
+    const closeX = document.createElement("span");
+    closeX.classList.add("closeX");
+    closeX.textContent = "×"
 
     const animatedPoint = document.createElement("div");
     animatedPoint.classList.add("animated-point");
@@ -40,20 +42,20 @@ export function createView() {
         setTimeout (function () {
             viewContent.removeChild(arrow);
             viewContent.appendChild(afterText);
-            viewContent.appendChild(arrow);
+            viewContent.appendChild(closeX);
             afterText.style.animationName = "fadein";
             afterText.style.animationDuration = "0.5s";
         }, 500)
         setTimeout (function () {
-            arrow.style.animationName = "fadein";
-            arrow.style.animationDuration = "0.5s";     
+            closeX.style.animationName = "fadein";
+            closeX.style.animationDuration = "0.5s";     
         }, 500)
             
     })
     viewContent.appendChild(animatedPoint);
 
     setTimeout(function () {
-        afterText.addEventListener("click", function() {
+        closeX.addEventListener("click", function() {
             viewContent.style.animationName = "fadeout";
             viewContent.style.animationDuration = "0.5s";
 
