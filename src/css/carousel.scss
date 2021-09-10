@@ -6,6 +6,7 @@
   .carousel {
     padding: 20px;
     height: 100%;
+    background-color: rgb(248, 248, 238);
   
     perspective: $viewer-distance;
     overflow: hidden;
@@ -28,7 +29,6 @@
         width: 100%;
         box-sizing: border-box;
         padding: 0 $item-separation / 2;
-        border: 1px dashed black;
   
         &:not(:first-of-type) {
           position: absolute;
@@ -52,6 +52,7 @@
       button {
         flex: 0 0 auto;
         margin: 0 10px;
+        opacity: 0.8;
   
         cursor: pointer;
   
