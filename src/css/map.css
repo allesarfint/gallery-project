@@ -10,7 +10,7 @@
 }
 
 #library {
-    width: 100%;
+    width: 90%;
     overflow: scroll;
     overflow-x: hidden;
     font-size: 1.5rem;
@@ -28,6 +28,6 @@
 .mapa {
     margin-top: 20px;
     margin-bottom: 50px;
-    width: 90%;
+    width: 100%;
     height: auto;
 }

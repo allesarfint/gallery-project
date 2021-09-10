@@ -1,22 +1,19 @@
-import imgA from './images/a.jpg';
-import imgB from './images/b.jpg';
-import imgC from './images/c.jpg';
-import imgD from './images/d.jpg';
-import imgE from './images/e.jpg';
-import imgF from './images/f.jpg';
-import imgG from './images/g.jpg';
-import imgH from './images/h.jpg';
-import imgI from './images/i.jpg';
 import carousel1 from './images/carousel-1.jpg';
 import carousel2 from './images/carousel-2.jpg';
+import carousel3 from './images/carousel-3.jpg';
+import carousel6 from './images/carousel-6.jpg';
+import carousel7 from './images/carousel-7.jpg';
+import carousel8 from './images/carousel-8.jpg';
 
 export const imgs = [
-    carousel1, carousel2, carousel1, carousel2,
-    carousel1, carousel2, carousel1,
+    carousel1, carousel2, carousel3, carousel6,
+    carousel7, carousel8,
 ];
 
+import mapa0 from './images/mapa-0.jpg';
 import mapa1 from './images/mapa-1.jpg';
+import mapa2 from './images/mapa-2.jpg';
 
 export const mapas = [
-    mapa1, mapa1, mapa1, mapa1,
+    mapa0, mapa1, mapa2,
 ]
