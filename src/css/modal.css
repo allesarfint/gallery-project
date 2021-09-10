@@ -146,12 +146,13 @@
     transform: scale(1.05);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@300&display=swap');
 
 #after-text {
     width: 70%;
-    font-family: 'Crinsom Text', serif;
+    font-family: 'Glory', sans-serif;
     font-size: 1.5rem;
     margin: 10px;
     cursor: default;
+    text-align: center;
 }
